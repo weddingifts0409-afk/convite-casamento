@@ -87,12 +87,38 @@ body {
     background: #000;
 }
 
-.pagina img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
+/* ===========================
+   NOME DO CONVIDADO
+=========================== */
+
+.pagina-convidado{
+    position: relative;
+}
+
+#nomeConvidado{
+
+    position: absolute;
+
+    left: 50%;
+    top: 74%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #5f4034;
+
+    letter-spacing: 1px;
+
+    z-index: 10;
 }
 
 /* ===========================
@@ -201,7 +227,7 @@ body {
 
     .contador{
 
-        top:1.5%;
+        top:2.5%;
         width:94%;
 
     }
@@ -330,4 +356,15 @@ body {
     font-size:14px;
     letter-spacing:3px;
     color:#8B6A58;
+}
+#nomeConvidado{
+
+    top:74%;
+
+    width:88%;
+
+    font-size:22px;
+
+}
+
 }

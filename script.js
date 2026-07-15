@@ -75,3 +75,50 @@ function atualizarContagem() {
 atualizarContagem();
 
 setInterval(atualizarContagem,1000);
+
+
+// ===============================
+// Nome do convidado (Google Sheets)
+// ===============================
+
+// URL do Google Apps Script
+const API =
+"https://script.google.com/macros/s/AKfycby9YSx_9bDBFdixHO8SHftWknEIcGCv3CD3DjBAjue9y_AJI96ifd3U3g8TRpFj7v0c/exec";
+
+// Lê o ID da URL
+const parametros = new URLSearchParams(window.location.search);
+const id = parametros.get("id");
+
+// Elemento onde será mostrado o nome
+const campoNome = document.getElementById("nomeConvidado");
+
+// Se existir um ID e o elemento
+if (id && campoNome) {
+
+    fetch(`${API}?id=${id}`)
+        .then(resposta => resposta.json())
+        .then(dados => {
+
+            if (dados.nome) {
+
+                campoNome.textContent = dados.nome;
+
+                // Guarda o número de pessoas para usar futuramente
+                window.numeroPessoas = dados.pessoas;
+
+            } else {
+
+                campoNome.textContent = "Convidado Especial";
+
+            }
+
+        })
+        .catch(() => {
+
+            campoNome.textContent = "Convidado Especial";
+
+        });
+
+}
+
+}
