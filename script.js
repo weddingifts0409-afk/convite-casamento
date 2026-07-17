@@ -99,24 +99,23 @@ if (id && campoNome) {
         .then(resposta => resposta.json())
         .then(dados => {
 
-            if (dados.nome) {
+           if (dados.nome) {
 
-                campoNome.textContent = dados.nome;
+    campoNome.textContent = dados.nome;
 
-                // Guarda o número de pessoas para usar futuramente
-                window.numeroPessoas = dados.pessoas;
+    window.numeroPessoas = dados.pessoas;
 
-            } else {
+} else {
 
-                campoNome.textContent = "Convidado Especial";
+    campoNome.textContent = "";
 
-            }
+}
 
         })
-        .catch(() => {
+       .catch(() => {
 
-            campoNome.textContent = "Convidado Especial";
+    campoNome.textContent = "";
 
-        });
+});
 
 }
