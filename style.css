@@ -127,6 +127,15 @@ body {
     z-index: 10;
 }
 
+#nomeConvidado{
+
+    top:76.8%;   /* desce o nome */
+
+    width:90%;
+
+    font-size:30px;   /* aumenta a fonte */
+
+}
 /* ===========================
    CONTAGEM REGRESSIVA
 =========================== */
