@@ -120,5 +120,3 @@ if (id && campoNome) {
         });
 
 }
-
-}
