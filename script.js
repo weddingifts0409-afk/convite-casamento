@@ -92,6 +92,8 @@ const id = parametros.get("id");
 // Elemento onde será mostrado o nome
 const campoNome = document.getElementById("nomeConvidado");
 
+const campoPessoas = document.getElementById("numeroPessoas");
+
 // Se existir um ID e o elemento
 if (id && campoNome) {
 
@@ -103,7 +105,10 @@ if (id && campoNome) {
 
     campoNome.textContent = dados.nome;
 
-    window.numeroPessoas = dados.pessoas;
+    if (campoPessoas) {
+    campoPessoas.textContent =
+        `Convite válido para ${dados.pessoas} pessoa${dados.pessoas > 1 ? "s" : ""}`;
+}
 
 } else {
 
